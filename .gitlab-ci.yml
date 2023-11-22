@@ -10,7 +10,6 @@ unit_tests:
   script:
     - pip install poetry
     - poetry install
-    - poetry shell
     # - pip install -r requirements.txt
-    - coverage run -m tox
-    - coverage report
+    - poetry run coverage run -m tox
+    - poetry run coverage report
