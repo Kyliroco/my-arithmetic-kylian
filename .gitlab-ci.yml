@@ -8,6 +8,8 @@ unit_tests:
   stage: test
   coverage: /TOTAL.*\s+(\d+\%)$/
   script:
-    - pip install -r requirements.txt
-    - coverage run -m pytest
+    - poetry install
+    - poetry shell
+    # - pip install -r requirements.txt
+    - coverage run -m tox
     - coverage report

@@ -15,3 +15,5 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.dev-dependencies]
 tox = "*"
+pytest = "*"
+coverage = "*"
