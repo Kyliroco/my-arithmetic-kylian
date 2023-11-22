@@ -9,5 +9,6 @@ unit_tests:
   coverage: /TOTAL.*\s+(\d+\%)$/
   script:
     - pip install -r requirements.txt
-    - coverage run -m pytest
+    - poetry install
+    - poetry run coverage run -m pytest
     - coverage report
