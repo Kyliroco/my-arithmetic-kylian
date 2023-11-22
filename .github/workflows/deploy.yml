@@ -6,9 +6,6 @@ on:
       - main
     tags:
       - '*'
-#   push:
-#     branches-ignore:
-#       - main
 
 jobs:
   build:
