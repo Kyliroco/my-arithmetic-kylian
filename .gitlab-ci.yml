@@ -8,6 +8,7 @@ unit_tests:
   stage: test
   coverage: /TOTAL.*\s+(\d+\%)$/
   script:
+    - pip install poetry
     - poetry install
     - poetry shell
     # - pip install -r requirements.txt
