@@ -10,5 +10,5 @@ unit_tests:
   script:
     - pip install -r requirements.txt
     - poetry install
-    - poetry run coverage run -m pytest
+    - coverage run -m pytest
     - coverage report
