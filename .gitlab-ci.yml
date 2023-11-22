@@ -14,7 +14,7 @@ unit_tests:
     - poetry run coverage report
     - poetry add poetry-dynamic-versioning --dev
 deploy:
-  stage: deploy
+  stage: test
   script:
     - pip install poetry
     - poetry install
