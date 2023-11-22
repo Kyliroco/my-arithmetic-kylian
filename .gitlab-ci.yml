@@ -18,5 +18,11 @@ deploy:
     - pip install poetry
     - poetry install
     - poetry build
+    - ls dist/
+  artifacts:
+    paths:
+      - dist/*
   only:
     - tags
+    - main
+  
