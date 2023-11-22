@@ -7,4 +7,11 @@ unit_tests:
   stage: test
   script:
     - pip install -r requirements.txt
-    - pytest
+    - coverage run -m pytest
+    - coverage report
+    - coverage xml
+  artifacts:
+    reports:
+      cobertura: coverage.xml
+    expire_in: 1 week
+
