@@ -19,10 +19,23 @@ deploy:
     - poetry install
     - poetry build
     - ls dist/
+    - echo my-artihmetic-$USER deployement on stable servers
   artifacts:
     paths:
       - dist/*
   only:
     - tags
+    - main
+deploy:
+  script:
+    - pip install poetry
+    - poetry install
+    - poetry build
+    - ls dist/
+    - echo my-artihmetic-$USER deployement on develop servers
+  artifacts:
+    paths:
+      - dist/*
+  except:
     - main
   
