@@ -1,5 +1,7 @@
 image: python:3.11.5
 
+coverage: /TOTAL.*\s+(\d+\%)$/
+
 stages:
   - test
 
@@ -9,4 +11,3 @@ unit_tests:
     - pip install -r requirements.txt
     - coverage run -m pytest
     - coverage report
-
