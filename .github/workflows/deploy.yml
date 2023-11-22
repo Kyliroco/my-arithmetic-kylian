@@ -1,0 +1,32 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - main
+    tags:
+      - '*'
+#   push:
+#     branches-ignore:
+#       - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.11.5' 
+      - name: Install dependencies
+        run: |
+          pip install poetry
+          poetry install
+      - name: Build and publish
+        run: |
+          poetry build
+          echo "Deploying the project..."
+      - name: List dist contents
+        run: |
+          ls dist/

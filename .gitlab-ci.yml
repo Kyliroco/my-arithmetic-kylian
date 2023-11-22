@@ -13,6 +13,8 @@ unit_tests:
     - poetry run coverage run -m pytest
     - poetry run coverage report
     - poetry add poetry-dynamic-versioning --dev
+  except:
+    - tags
 deploy:
   script:
     - pip install poetry
