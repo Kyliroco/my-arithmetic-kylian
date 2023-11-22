@@ -8,6 +8,18 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = "^3.11"
 
+[tool.poetry.group.dev.dependencies]
+poetry-dynamic-versioning = "^1.1.1"
+
+[tool.poetry-dynamic-versioning]
+enable = true
+style = "pep440"
+
+[tool.poetry-dynamic-versioning.tagged-metadata]
+enabled = true
+
+[tool.poetry-dynamic-versioning.branches.main]
+pattern = "main"
 
 [build-system]
 requires = ["poetry-core"]

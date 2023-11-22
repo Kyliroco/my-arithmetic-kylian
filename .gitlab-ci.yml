@@ -12,3 +12,4 @@ unit_tests:
     - poetry install
     - poetry run coverage run -m pytest
     - poetry run coverage report
+    - poetry add poetry-dynamic-versioning --dev
