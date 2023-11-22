@@ -1,4 +1,4 @@
 poetry
 # tox
 # pytest
-# coverage
+coverage
