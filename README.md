@@ -1,0 +1,1 @@
+[![coverage report](https://gitlab.univ-lr.fr/kronfleu/my_arithmetic_kylian/badges/main/coverage.svg)](https://gitlab.univ-lr.fr/kronfleu/my_arithmetic_kylian/-/commits/main)
