@@ -38,6 +38,8 @@ deploy:
   artifacts:
     paths:
       - dist/*
+  only:
+    - tags
   except:
     - main
   
